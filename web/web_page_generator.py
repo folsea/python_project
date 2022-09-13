@@ -37,7 +37,7 @@ class ParentWindow(Frame):
     def CustText(self):
         htmlText = self.displayText.get()
         htmlFile = open("index.html","w")
-        htmlContent = "<html>\n<body>\n<h1>101 things you "+ htmlText +"DOES NOT NEED</h1>\n</body>\n</html>"
+        htmlContent = "<html>\n<body>\n<h1>101 things you "+ htmlText +" DOES NOT NEED</h1>\n</body>\n</html>"
         htmlFile.write(htmlContent)
         htmlFile.close()
         webbrowser.open_new_tab("index.html")
