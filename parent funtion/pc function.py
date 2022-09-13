@@ -12,30 +12,35 @@ class User:
             print("Welcome back, {}!".format(entry_name))
         else:
             print("The passworn or email is incorrect.")
-
+        
 #Child Class Employee
 class Employee(User):
     base_pay = 11.00
     department = "General"
     pin_number = "3980"
 
+
+class Manger(User):
+    base_pay= 15.00
+    department = "Managment"
+    pin_number= "2356"
+    
 # THis is the same mathod in the parent class "User".
 #The diffenece is that, instead of using entry_password, we're using entry_pin.
 
-    def getLoginInto(self):
+    def getLoginInfo(self):
         entry_name = input("Enter you name: ")
         entry_email = input("Enter your email: ")
         entry_pin = input("Enter your pin: ")
-        if (entry_emial == self.email and entry_pin == self.pin_number):
+        if (entry_email == self.email and entry_pin == self.pin_number):
             print("Welcome back, {}!".format(entry_name))
         else:
             print("The pin or email is incorrect")
 
 #The following code invokes the methods inside each class for User and EMployee.
-
+    
 customer = User()
 customer.getLoginInfo()
-
 manager = Employee()
 manager.getLoginInfo() 
                             
